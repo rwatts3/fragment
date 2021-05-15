@@ -1,0 +1,27 @@
+version: "3"
+
+services:
+  fragment_postgres:
+    container_name: "fragment_postgres"
+    image: "postgres:13-alpine"
+    restart: "unless-stopped"
+    environment:
+      POSTGRES_DB: "fragment"
+      POSTGRES_USER: "fragment"
+      POSTGRES_PASSWORD: "fragment"
+    volumes:
+      - "./migrations:/docker-entrypoint-initdb.d"
+      - "fragment:/var/lib/postgresql/data"
+    ports:
+      - "5432:5432"
+
+  fragment_nats:
+    container_name: "fragment_nats"
+    image: "nats:2-alpine"
+    restart: "unless-stopped"
+    ports:
+      - "4222:4222"
+      - "8222:8222"
+
+volumes:
+  fragment:
