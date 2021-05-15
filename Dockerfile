@@ -1,4 +1,4 @@
-FROM nunchistudio/blacksmith-enterprise:0.17.0-alpine
+FROM nunchistudio/blacksmith-enterprise:0.17.1-alpine
 
 ADD ./ /fragment
 WORKDIR /fragment
