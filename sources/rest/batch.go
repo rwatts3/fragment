@@ -5,8 +5,8 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/nunchistudio/blacksmith/flow/source"
 	"github.com/nunchistudio/blacksmith/helper/errors"
+	"github.com/nunchistudio/blacksmith/source"
 
 	"gopkg.in/segmentio/analytics-go.v3"
 )

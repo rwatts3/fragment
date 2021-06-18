@@ -1,8 +1,8 @@
 # Fragment
 
 Fragment is a showcase application to demonstrate how to build a Segment clone
-on top of Blacksmith. Blacksmith is a low-code data engineering ecosystem for
-end-to-end data reliability with self-managed ETL.
+on top of Blacksmith. Blacksmith is a low-code self-hosted data engineering
+platform bringing ETL (with Go), TLT (with SQL), and databases migrations.
 
 **Related resources:**
 - [Tutorial: Segment Clone](https://nunchi.studio/blacksmith/tutorials/fragment)

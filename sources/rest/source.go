@@ -3,8 +3,8 @@ package rest
 import (
 	"time"
 
-	"github.com/nunchistudio/blacksmith/flow/source"
 	"github.com/nunchistudio/blacksmith/helper/logger"
+	"github.com/nunchistudio/blacksmith/source"
 )
 
 /*

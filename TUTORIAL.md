@@ -38,9 +38,9 @@ $ blacksmith generate application fragment --path ./fragment
 
 **Related resources:**
 - Getting started >
-  [Installation](/blacksmith/introduction/start/install)
+  [Installation](/blacksmith/start/onboarding/install)
 - Getting started >
-  [Creating an application](/blacksmith/introduction/start/create)
+  [Creating an application](/blacksmith/start/firstapp/create)
 - CLI reference >
   [`generate application`](/blacksmith/cli/generate-application)
 
@@ -55,8 +55,8 @@ $ blacksmith generate source --name rest \
 ```
 
 **Related resources:**
-- ETL guides >
-  [Sources](/blacksmith/guides/extraction/sources)
+- Guides for ETL with Go >
+  [Sources](/blacksmith/etl/extraction/sources)
 - CLI reference >
   [`generate source`](/blacksmith/cli/generate-source)
 
@@ -110,10 +110,10 @@ $ blacksmith generate trigger --name identify --mode http \
 ```
 
 **Related resources:**
-- ETL guides >
-  [Triggers](/blacksmith/guides/extraction/triggers)
-- ETL guides >
-  [Triggers HTTP](/blacksmith/guides/extraction/triggers-http)
+- Guides for ETL with Go >
+  [Triggers](/blacksmith/etl/extraction/triggers)
+- Guides for ETL with Go >
+  [Triggers HTTP](/blacksmith/etl/extraction/triggers-http)
 - CLI reference >
   [`generate trigger`](/blacksmith/cli/generate-trigger)
 
@@ -139,7 +139,7 @@ import (
   "strings"
   "time"
 
-  "github.com/nunchistudio/blacksmith/flow/source"
+  "github.com/nunchistudio/blacksmith/source"
   "github.com/nunchistudio/blacksmith/helper/errors"
 
   "gopkg.in/segmentio/analytics-go.v3"
@@ -315,7 +315,7 @@ package main
 
 import (
   "github.com/nunchistudio/blacksmith"
-  "github.com/nunchistudio/blacksmith/flow/destination"
+  "github.com/nunchistudio/blacksmith/destination"
 
   "github.com/nunchistudio/blacksmith-modules/amplitude/amplitudedestination"
   "github.com/nunchistudio/blacksmith-modules/mailchimp/mailchimpdestination"
@@ -383,7 +383,7 @@ BLACKSMITH_LICENSE_TOKEN=FRAGMENT
 
 ## Docker environment
 
-[As mentioned in the "Getting started"](/blacksmith/introduction/start/docker),
+[As mentioned in the "Getting started"](/blacksmith/start/firstapp/docker),
 Blacksmith leverages Docker for environment parity.
 
 Fragment uses a `Docker-compose.yml` to make development a breeze. This file is
@@ -475,8 +475,8 @@ Blacksmith and following the Segment Specification.
 
 Here are some ideas for going further:
 - Add a source with triggers leveraging the Pub / Sub adapter ([mode
-  `sub`](/blacksmith/guides/extraction/triggers-sub)) in order to collect events
+  `sub`](/blacksmith/etl/extraction/triggers-sub)) in order to collect events
   from a message queue in addition to the current triggers (which are of [mode
-  `http`](/blacksmith/guides/extraction/triggers-http)).
+  `http`](/blacksmith/etl/extraction/triggers-http)).
 - Triggers can return an action to insert data in a warehouse using the [`sqlike`
   module](/blacksmith/tutorials/sqlike).

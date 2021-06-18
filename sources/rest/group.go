@@ -7,8 +7,8 @@ import (
 	"time"
 
 	"github.com/nunchistudio/blacksmith/flow"
-	"github.com/nunchistudio/blacksmith/flow/source"
 	"github.com/nunchistudio/blacksmith/helper/errors"
+	"github.com/nunchistudio/blacksmith/source"
 
 	"github.com/nunchistudio/blacksmith-modules/segment/segmentflow"
 

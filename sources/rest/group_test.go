@@ -1,7 +1,7 @@
 package rest
 
 import (
-	"github.com/nunchistudio/blacksmith/flow/source"
+	"github.com/nunchistudio/blacksmith/source"
 )
 
 var _ source.Trigger = Group{}
